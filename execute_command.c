@@ -39,7 +39,7 @@ void execute(stack_t **h, char *line, unsigned int line_number)
 	}
 	}
 	/*Maybe change for buffer.*/
-	printf("L%d: unknown instruction ", line_number);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, start_c);
 	while (*start_c && (*start_c != ' ' && *start_c != '\t'))
 		putchar(*start_c++);
 	putchar('\n');
@@ -64,17 +64,17 @@ int get_argument(stack_t **h, char *opcode, unsigned int l)
 
 	if (_strcmp(flag, "stack") == 0)
 	{
-		node = pop_s(h);
+	node = pop_s(h);
 	}
 	else
 	{
-		node = dequeue(h);
+	node = dequeue(h);
 	}
 	if (node == NULL)
 	{
-		printf("L%d: can't %s, %s too short\n", l, opcode, flag);
-		free_stack(*h);
-		exit(EXIT_FAILURE);
+	fprintf(stderr, "L%d: can't %s, %s too short\n", l, opcode, flag);
+	free_stack(*h);
+	exit(EXIT_FAILURE);
 	}
 	tmp = node->n;
 	free(node);

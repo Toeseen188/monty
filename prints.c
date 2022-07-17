@@ -54,7 +54,7 @@ void pint(stack_t **h, unsigned int l)
 
 	if (!h || !*h)
 	{
-		printf("L%d: can't pint, %s empty\n", l, flag);
+		fprintf(stderr, "L%d: can't pint, %s empty\n", l, flag);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
@@ -74,7 +74,7 @@ void pchar(stack_t **h, unsigned int l)
 
 	if (!h || !*h)
 	{
-		printf("L%d: can't pchar, %s empty\n", l, flag);
+		fprintf(stderr, "L%d: can't pchar, %s empty\n", l, flag);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
@@ -82,7 +82,7 @@ void pchar(stack_t **h, unsigned int l)
 	value = (*h)->n;
 	if (value < 0 || value > 127)
 	{
-		printf("L%d: can't pchar, value out of range\n", l);
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", l);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
