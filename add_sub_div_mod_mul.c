@@ -48,7 +48,7 @@ void _div(stack_t **h, unsigned int l)
 
 	if (n1 == 0)
 	{
-		printf("L%d: division by zero\n", l);
+		fprintf(stderr, "L%d: division by zero\n", l);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
@@ -89,7 +89,7 @@ void _mod(stack_t **h, unsigned int l)
 
 	if (n1 == 0)
 	{
-		printf("L%d: division by zero\n", l);
+		fprintf(stderr, "L%d: division by zero\n", l);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}

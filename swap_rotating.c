@@ -12,7 +12,7 @@ void swap(stack_t **h, unsigned int l)
 
 	if (!h || !*h)
 	{
-		printf("L%d: can't swap, %s too short\n", l, flag);
+		fprintf(stderr, "L%d: can't swap, %s too short\n", l, flag);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}

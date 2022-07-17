@@ -25,7 +25,7 @@ void push(stack_t **h, char *line, unsigned int l)
 	free(line);
 	if (node == NULL)
 	{
-		puts("Error: malloc failed");
+		fprintf(stderr, "Error: malloc failed");
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
@@ -47,7 +47,7 @@ void pop(stack_t **h, unsigned int l)
 
 	if (node == NULL)
 	{
-		printf("L%d: can't pop an empty %s\n", l, flag);
+		fprintf(stderr, "L%d: can't pop an empty %s\n", l, flag);
 		free_stack(*h);
 		exit(EXIT_FAILURE);
 	}
