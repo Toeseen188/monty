@@ -32,11 +32,11 @@ void execute(stack_t **h, char *line, unsigned int line_number)
 	for (i = 0; instr[i].opcode; ++i)
 	{
 	if (_strncmp(start_c, instr[i].opcode, _strlen(instr[i].opcode)) == 0)
-		{
-			free(line);
-			(instr[i].f)(h, line_number);
-			return;
-		}
+	{
+	free(line);
+	(instr[i].f)(h, line_number);
+	return;
+	}
 	}
 	/*Maybe change for buffer.*/
 	printf("L%d: unknown instruction ", line_number);

@@ -1,4 +1,5 @@
 #include "monty.h"
+
 char *flag = "stack";
 
 /**
@@ -9,6 +10,7 @@ char *flag = "stack";
  */
 int main(int ac, char **av)
 {
+
 	stack_t *h;
 	unsigned int line_number;
 	ssize_t status;
