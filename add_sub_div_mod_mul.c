@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
  * _add - add the top 2 values on the stack
  * @h: pointer to dll

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * push - add an element to the stack/queue

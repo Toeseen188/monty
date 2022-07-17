@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
  * execute - finds the function matching the opcode
  * @h: pointer to dll

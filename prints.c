@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
  * pall - print all the elements in a dll as numbers
  * @head: pointer to dll
