@@ -21,7 +21,7 @@ void execute(stack_t **h, char *line, unsigned int line_number)
 	char *start_c;
 
 	start_c = skip_spaces(line);
-	if (start_c == NULL)
+	if (start_c == NULL || *start_c == '#')
 		return;
 	if (_strncmp(start_c, "push", _strlen("push")) == 0)
 	{
